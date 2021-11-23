@@ -15,7 +15,7 @@ sap-supplier-invoice-sql には、sqlの設定ファイルとして、以下の�
 
 * sap-supplier-invoice-sql-header-data.sql（SAP 仕入先請求書 - ヘッダデータ ）  
 * sap-supplier-invoice-sql-purchaese-order-reference-data.sql（SAP 仕入先請求書 - 購買発注参照データ）  
-* sap-supplier-invoice-sql-tax-data.sql（SAP 仕入先請求 - 税データ）  
+* sap-supplier-invoice-sql-tax-data.sql（SAP 仕入先請求書 - 税データ）  
 
 ## MySQLのセットアップ / Kubernetesの設定 / SQLテーブルの作成方法
 
