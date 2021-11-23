@@ -1,0 +1,30 @@
+CREATE TABLE `sap-supplier-invoice-account-assignment-data`
+(
+    `SupplierInvoice`         varchar(10) DEFAULT NULL,
+    `FiscalYear`              int(4) DEFAULT NULL,
+    `SupplierInvoiceItem`     int(6) DEFAULT NULL,
+    `CompanyCode`             varchar(4) DEFAULT NULL,
+    `CostCenter`              varchar(10) DEFAULT NULL,
+    `ControllingArea`         varchar(4) DEFAULT NULL,
+    `BusinessArea`            varchar(4) DEFAULT NULL,
+    `ProfitCenter`            varchar(10) DEFAULT NULL,
+    `FunctionalArea`          varchar(16) DEFAULT NULL,
+    `GLAccount`               varchar(10) DEFAULT NULL,
+    `SalesOrder`              varchar(10) DEFAULT NULL,
+    `SalesOrderItem`          int(6) DEFAULT NULL,
+    `CostObject`              varchar(12) DEFAULT NULL,
+    `WBSElement`              int(8) DEFAULT NULL,
+    `DocumentCurrency`        varchar(5) DEFAULT NULL,
+    `SuplrInvcAcctAssignmentAmount` float(13) DEFAULT NULL,
+    `TaxCode`                 varchar(2) DEFAULT NULL,
+    `WorkItem`                varchar(10) DEFAULT NULL,
+    `MasterFixedAsset`        varchar(12) DEFAULT NULL,
+    `FixedAsset`              varchar(4) DEFAULT NULL,
+    `DebitCreditCode`         varchar(1) DEFAULT NULL,
+    `InternalOrder`           varchar(12) DEFAULT NULL,
+    `ProjectNetwork`          varchar(10) DEFAULT NULL,
+    `ProfitabilitySegment`    int(10) DEFAULT NULL,
+    PRIMARY KEY (`SupplierInvoice`, `FiscalYear`, `SupplierInvoiceItem`),
+    CONSTRAINT `SupplierInvoice_fk` FOREIGN KEY (`SupplierInvoice`) REFERENCES `sap-supplier-invoice-header-data` (`SupplierInvoice`)
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4;
