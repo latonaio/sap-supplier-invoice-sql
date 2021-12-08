@@ -24,7 +24,7 @@ CREATE TABLE `sap-supplier-invoice-header-data`
     `SupplierPostingLineItemText` varchar(50) DEFAULT NULL,
     `TaxIsCalculatedAutomatically` tinyint(1) DEFAULT NULL,
     `BusinessArea`            varchar(4) DEFAULT NULL,
-    `SupplierInvoiceIsCreditMemo` tinyint(1) DEFAULT NULL,
+    `SupplierInvoiceIsCreditMemo` varchar(1) DEFAULT NULL,
     `ReverseDocument`         varchar(10) DEFAULT NULL,
     `ReverseDocumentFiscalYear` varchar(4) DEFAULT NULL,
     PRIMARY KEY (`SupplierInvoice`, `FiscalYear`)
