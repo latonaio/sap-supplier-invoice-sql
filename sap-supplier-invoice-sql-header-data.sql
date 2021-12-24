@@ -1,7 +1,7 @@
 CREATE TABLE `sap-supplier-invoice-header-data`
 (
-    `SupplierInvoice`         varchar(10) DEFAULT NULL,
-    `FiscalYear`              varchar(4) DEFAULT NULL,
+    `SupplierInvoice`         varchar(10) NOT NULL,
+    `FiscalYear`              varchar(4) NOT NULL,
     `CompanyCode`             varchar(4) DEFAULT NULL,
     `DocumentDate`            date DEFAULT NULL,
     `PostingDate`             date DEFAULT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE `sap-supplier-invoice-header-data`
     `SupplierInvoiceIsCreditMemo` varchar(1) DEFAULT NULL,
     `ReverseDocument`         varchar(10) DEFAULT NULL,
     `ReverseDocumentFiscalYear` varchar(4) DEFAULT NULL,
+    
     PRIMARY KEY (`SupplierInvoice`, `FiscalYear`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
-

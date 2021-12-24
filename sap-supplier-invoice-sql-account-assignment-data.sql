@@ -1,8 +1,8 @@
 CREATE TABLE `sap-supplier-invoice-account-assignment-data`
 (
-    `SupplierInvoice`         varchar(10) DEFAULT NULL,
-    `FiscalYear`              varchar(4) DEFAULT NULL,
-    `SupplierInvoiceItem`     varchar(6) DEFAULT NULL,
+    `SupplierInvoice`         varchar(10) NOT NULL,
+    `FiscalYear`              varchar(4) NOT NULL,
+    `SupplierInvoiceItem`     varchar(6) NOT NULL,
     `CompanyCode`             varchar(4) DEFAULT NULL,
     `CostCenter`              varchar(10) DEFAULT NULL,
     `ControllingArea`         varchar(4) DEFAULT NULL,

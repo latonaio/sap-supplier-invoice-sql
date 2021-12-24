@@ -1,8 +1,8 @@
 CREATE TABLE `sap-supplier-invoice-purchaese-order-reference-data`
 (
-    `SupplierInvoice`         varchar(10) DEFAULT NULL,
-    `FiscalYear`              varchar(4) DEFAULT NULL,
-    `SupplierInvoiceItem`     varchar(6) DEFAULT NULL,
+    `SupplierInvoice`         varchar(10) NOT NULL,
+    `FiscalYear`              varchar(4) NOT NULL,
+    `SupplierInvoiceItem`     varchar(6) NOT NULL,
     `PurchaseOrder`           varchar(10) DEFAULT NULL,
     `PurchaseOrderItem`       varchar(5) DEFAULT NULL,
     `Plant`                   varchar(4) DEFAULT NULL,
