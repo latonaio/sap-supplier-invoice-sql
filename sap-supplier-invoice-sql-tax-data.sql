@@ -7,6 +7,6 @@ CREATE TABLE `sap-supplier-invoice-tax-data`
     `TaxAmount`               varchar(13) DEFAULT NULL,
     `TaxBaseAmountInTransCrcy` varchar(13) DEFAULT NULL,
     PRIMARY KEY (`SupplierInvoice`, `FiscalYear`),
-    CONSTRAINT (`SupplierInvoice_fk`, `FiscalYear_fk`) FOREIGN KEY (`SupplierInvoice_fk`, `FiscalYear_fk`) REFERENCES `sap-supplier-invoice-header-data` (`SupplierInvoice_fk`, `FiscalYear_fk`)
+    CONSTRAINT (`SupplierInvoice_fk`, `FiscalYear_fk`) FOREIGN KEY (`SupplierInvoice`, `FiscalYear`) REFERENCES `sap-supplier-invoice-header-data` (`SupplierInvoice`, `FiscalYear`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
