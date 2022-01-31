@@ -1,4 +1,4 @@
-CREATE TABLE `sap_supplier_invoice_purchaese_order_reference_data`
+CREATE TABLE `sap_supplier_invoice_purchase_order_reference_data`
 (
     `SupplierInvoice`         varchar(10) NOT NULL,
     `FiscalYear`              varchar(4) NOT NULL,
@@ -16,6 +16,6 @@ CREATE TABLE `sap_supplier_invoice_purchaese_order_reference_data`
     `SupplierInvoiceItemText` varchar(50) DEFAULT NULL,
     `PurchasingDocumentItemCategory` varchar(1) DEFAULT NULL,
     PRIMARY KEY (`SupplierInvoice`, `FiscalYear`, `SupplierInvoiceItem`),
-    CONSTRAINT (`SAPSupplierInvoicePurchaseOrderReferenceData_fk`) FOREIGN KEY (`SupplierInvoice`, `FiscalYear`) REFERENCES `sap_supplier_invoice_header_data` (`SupplierInvoice`, `FiscalYear`)
+    CONSTRAINT `SAPSupplierInvoicePurchaseOrderReferenceData_fk` FOREIGN KEY (`SupplierInvoice`, `FiscalYear`) REFERENCES `sap_supplier_invoice_header_data` (`SupplierInvoice`, `FiscalYear`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

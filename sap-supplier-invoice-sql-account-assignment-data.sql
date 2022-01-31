@@ -25,6 +25,6 @@ CREATE TABLE `sap_supplier_invoice_account_assignment_data`
     `ProjectNetwork`          varchar(10) DEFAULT NULL,
     `ProfitabilitySegment`    varchar(10) DEFAULT NULL,
     PRIMARY KEY (`SupplierInvoice`, `FiscalYear`, `SupplierInvoiceItem`),
-    CONSTRAINT (`SASPSupplierInvoiceAccountAssignmentData_fk`) FOREIGN KEY (`SupplierInvoice`, `FiscalYear`) REFERENCES `sap_supplier_invoice_header_data` (`SupplierInvoice`, `FiscalYear`)
+    CONSTRAINT `SASPSupplierInvoiceAccountAssignmentData_fk` FOREIGN KEY (`SupplierInvoice`, `FiscalYear`) REFERENCES `sap_supplier_invoice_header_data` (`SupplierInvoice`, `FiscalYear`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
